@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "843b6d81889389040397eaf091caf538",
+    "content-hash": "38849ecf5334d9a62b154e6cbb4b2bbf",
     "packages": [
         {
             "name": "aura/cli",
@@ -66,6 +66,135 @@
                 "source": "https://github.com/auraphp/Aura.Cli/tree/2.x"
             },
             "time": "2017-02-09T17:14:27+00:00"
+        },
+        {
+            "name": "aura/sql",
+            "version": "5.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/auraphp/Aura.Sql.git",
+                "reference": "0e1fdc674e2a11b4ab83286c4410426714ece1e1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/auraphp/Aura.Sql/zipball/0e1fdc674e2a11b4ab83286c4410426714ece1e1",
+                "reference": "0e1fdc674e2a11b4ab83286c4410426714ece1e1",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pdo": "*",
+                "php": ">=8.1",
+                "psr/log": "^1.0 || ^2.0 || ^3.0"
+            },
+            "require-dev": {
+                "pds/skeleton": "~1.0",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Aura\\Sql\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aura.Sql Contributors",
+                    "homepage": "https://github.com/auraphp/Aura.Sql/contributors"
+                }
+            ],
+            "description": "A PDO extension that provides lazy connections, array quoting, query profiling, value binding, and convenience methods for common fetch styles. Because it extends PDO, existing code that uses PDO can use this without any changes to the existing code.",
+            "homepage": "https://github.com/auraphp/Aura.Sql",
+            "keywords": [
+                "mysql",
+                "pdo",
+                "pgsql",
+                "postgres",
+                "postgresql",
+                "sql server",
+                "sqlite",
+                "sqlserver",
+                "sqlsrv"
+            ],
+            "support": {
+                "issues": "https://github.com/auraphp/Aura.Sql/issues",
+                "source": "https://github.com/auraphp/Aura.Sql/tree/5.0.2"
+            },
+            "time": "2023-06-12T05:16:06+00:00"
+        },
+        {
+            "name": "aura/sqlquery",
+            "version": "2.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/auraphp/Aura.SqlQuery.git",
+                "reference": "33a6283a0bc987d6b12e91c73486937ce1047366"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/auraphp/Aura.SqlQuery/zipball/33a6283a0bc987d6b12e91c73486937ce1047366",
+                "reference": "33a6283a0bc987d6b12e91c73486937ce1047366",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "yoast/phpunit-polyfills": "~1.0"
+            },
+            "suggest": {
+                "aura/sql": "Provides an extension to the native PDO along with a profiler and connection locator. Use version 2.*."
+            },
+            "type": "library",
+            "extra": {
+                "aura": {
+                    "type": "library"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Aura\\SqlQuery\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Aura.SqlQuery Contributors",
+                    "homepage": "https://github.com/auraphp/Aura.SqlQuery/contributors"
+                }
+            ],
+            "description": "Object-oriented query builders for MySQL, Postgres, SQLite, and SQLServer; can be used with any database connection library.",
+            "homepage": "https://github.com/auraphp/Aura.SqlQuery",
+            "keywords": [
+                "database",
+                "db",
+                "delete",
+                "dml",
+                "insert",
+                "mysql",
+                "pdo",
+                "pgsql",
+                "postgres",
+                "postgresql",
+                "query",
+                "select",
+                "sql",
+                "sql server",
+                "sqlite",
+                "sqlserver",
+                "update"
+            ],
+            "support": {
+                "issues": "https://github.com/auraphp/Aura.SqlQuery/issues",
+                "source": "https://github.com/auraphp/Aura.SqlQuery/tree/2.8.1"
+            },
+            "time": "2023-04-25T13:25:37+00:00"
         },
         {
             "name": "bear/app-meta",
@@ -1390,6 +1519,54 @@
             "time": "2023-12-03T20:05:35+00:00"
         },
         {
+            "name": "jetbrains/phpstorm-stubs",
+            "version": "v2023.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JetBrains/phpstorm-stubs.git",
+                "reference": "99d8bcab934ae5362f33660b1cd4b8c4d617c40b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/99d8bcab934ae5362f33660b1cd4b8c4d617c40b",
+                "reference": "99d8bcab934ae5362f33660b1cd4b8c4d617c40b",
+                "shasum": ""
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "@stable",
+                "nikic/php-parser": "@stable",
+                "php": "^8.0",
+                "phpdocumentor/reflection-docblock": "@stable",
+                "phpunit/phpunit": "^9.6"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "PhpStormStubsMap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "PHP runtime & extensions header files for PhpStorm",
+            "homepage": "https://www.jetbrains.com/phpstorm",
+            "keywords": [
+                "autocomplete",
+                "code",
+                "inference",
+                "inspection",
+                "jetbrains",
+                "phpstorm",
+                "stubs",
+                "type"
+            ],
+            "support": {
+                "source": "https://github.com/JetBrains/phpstorm-stubs/tree/v2023.3"
+            },
+            "time": "2023-11-01T18:52:29+00:00"
+        },
+        {
             "name": "justinrainbow/json-schema",
             "version": "v5.2.13",
             "source": {
@@ -1518,6 +1695,49 @@
                 "source": "https://github.com/koriym/Koriym.Attributes/tree/1.0.5"
             },
             "time": "2023-07-08T09:09:20+00:00"
+        },
+        {
+            "name": "koriym/csv-entities",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/koriym/Koriym.CsvEntities.git",
+                "reference": "4156419d314fc1c0e0431a4296e5899baa7329b8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/koriym/Koriym.CsvEntities/zipball/4156419d314fc1c0e0431a4296e5899baa7329b8",
+                "reference": "4156419d314fc1c0e0431a4296e5899baa7329b8",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "bamarni/composer-bin-plugin": "^1.8",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Koriym\\CsvEntities\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Akihito Koriyama",
+                    "email": "akihito.koriyama@gmail.com"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/koriym/Koriym.CsvEntities/issues",
+                "source": "https://github.com/koriym/Koriym.CsvEntities/tree/1.0.1"
+            },
+            "time": "2023-05-26T09:50:50+00:00"
         },
         {
             "name": "koriym/http-constants",
@@ -2087,6 +2307,109 @@
                 "source": "https://github.com/blongden/hal/tree/0.9.14"
             },
             "time": "2021-07-08T10:14:23+00:00"
+        },
+        {
+            "name": "pagerfanta/pagerfanta",
+            "version": "v3.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BabDev/Pagerfanta.git",
+                "reference": "a07c84296e491add39d103b812129de77610c33b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BabDev/Pagerfanta/zipball/a07c84296e491add39d103b812129de77610c33b",
+                "reference": "a07c84296e491add39d103b812129de77610c33b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.4 || ^8.0",
+                "symfony/deprecation-contracts": "^2.1 || ^3.0",
+                "symfony/polyfill-php80": "^1.15"
+            },
+            "conflict": {
+                "doctrine/collections": "<1.8",
+                "doctrine/dbal": "<3.1",
+                "doctrine/mongodb-odm": "<2.2.2",
+                "doctrine/orm": "<2.8",
+                "doctrine/phpcr-odm": "<1.5",
+                "ruflin/elastica": "<6.0",
+                "solarium/solarium": "<5.0",
+                "twig/twig": "<2.13"
+            },
+            "replace": {
+                "pagerfanta/core": "self.version",
+                "pagerfanta/doctrine-collections-adapter": "self.version",
+                "pagerfanta/doctrine-dbal-adapter": "self.version",
+                "pagerfanta/doctrine-mongodb-odm-adapter": "self.version",
+                "pagerfanta/doctrine-orm-adapter": "self.version",
+                "pagerfanta/doctrine-phpcr-odm-adapter": "self.version",
+                "pagerfanta/elastica-adapter": "self.version",
+                "pagerfanta/solarium-adapter": "self.version",
+                "pagerfanta/twig": "self.version"
+            },
+            "require-dev": {
+                "dg/bypass-finals": "^1.3",
+                "doctrine/cache": "^1.11 || ^2.0",
+                "doctrine/collections": "^1.8 || ^2.0",
+                "doctrine/dbal": "^3.1",
+                "doctrine/mongodb-odm": "^2.2.2",
+                "doctrine/orm": "^2.8",
+                "doctrine/phpcr-odm": "^1.5",
+                "jackalope/jackalope-doctrine-dbal": "^1.7.4",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan": "1.9.14",
+                "phpstan/phpstan-phpunit": "1.3.3",
+                "phpunit/phpunit": "9.6.7 || 10.1.0",
+                "rector/rector": "0.15.12",
+                "ruflin/elastica": "^6.0 || ^7.0",
+                "solarium/solarium": "^5.0 || ^6.0",
+                "symfony/cache": "^5.4 || ^6.0",
+                "twig/twig": "^2.13 || ^3.0"
+            },
+            "suggest": {
+                "twig/twig": "To integrate Pagerfanta with Twig"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Pagerfanta\\": "lib/Core/",
+                    "Pagerfanta\\Twig\\": "lib/Twig/",
+                    "Pagerfanta\\Elastica\\": "lib/Adapter/Elastica/",
+                    "Pagerfanta\\Solarium\\": "lib/Adapter/Solarium/",
+                    "Pagerfanta\\Doctrine\\ORM\\": "lib/Adapter/Doctrine/ORM/",
+                    "Pagerfanta\\Doctrine\\DBAL\\": "lib/Adapter/Doctrine/DBAL/",
+                    "Pagerfanta\\Doctrine\\PHPCRODM\\": "lib/Adapter/Doctrine/PHPCRODM/",
+                    "Pagerfanta\\Doctrine\\MongoDBODM\\": "lib/Adapter/Doctrine/MongoDBODM/",
+                    "Pagerfanta\\Doctrine\\Collections\\": "lib/Adapter/Doctrine/Collections/"
+                },
+                "exclude-from-classmap": [
+                    "lib/**/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Pagination for PHP",
+            "keywords": [
+                "page",
+                "pagination",
+                "paginator",
+                "paging"
+            ],
+            "support": {
+                "issues": "https://github.com/BabDev/Pagerfanta/issues",
+                "source": "https://github.com/BabDev/Pagerfanta/tree/v3.8.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/mbabker",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-04-15T16:39:36+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -2925,6 +3248,66 @@
             "time": "2024-05-20T07:48:16+00:00"
         },
         {
+            "name": "ray/aura-sql-module",
+            "version": "1.13.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ray-di/Ray.AuraSqlModule.git",
+                "reference": "deb9b8bce31e4829cb3be6ac840a4dfea0e53267"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ray-di/Ray.AuraSqlModule/zipball/deb9b8bce31e4829cb3be6ac840a4dfea0e53267",
+                "reference": "deb9b8bce31e4829cb3be6ac840a4dfea0e53267",
+                "shasum": ""
+            },
+            "require": {
+                "aura/sql": "^4.0 || ^5.0",
+                "aura/sqlquery": "^2.7.1 || 3.x-dev",
+                "doctrine/annotations": "^1.11",
+                "ext-pdo": "*",
+                "pagerfanta/pagerfanta": "^3.5",
+                "php": "^7.4 || ^8.0",
+                "psr/log": "^1.1 || ^2.0 || ^3.0",
+                "ray/aop": "^2.10.4",
+                "ray/di": "^2.13.1",
+                "rize/uri-template": "^0.3.4",
+                "symfony/polyfill-php81": "^1.24"
+            },
+            "require-dev": {
+                "bamarni/composer-bin-plugin": "^1.4",
+                "maglnet/composer-require-checker": "^3.0",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src-files/uri_template.php"
+                ],
+                "psr-4": {
+                    "Ray\\AuraSqlModule\\": [
+                        "src/",
+                        "src-deprecated"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "aura/sql module for Ray.Di",
+            "keywords": [
+                "Aura Sql",
+                "Ray module",
+                "pdo"
+            ],
+            "support": {
+                "issues": "https://github.com/ray-di/Ray.AuraSqlModule/issues",
+                "source": "https://github.com/ray-di/Ray.AuraSqlModule/tree/1.13.2"
+            },
+            "time": "2023-07-10T23:32:21+00:00"
+        },
+        {
             "name": "ray/compiler",
             "version": "1.10.5",
             "source": {
@@ -3060,6 +3443,76 @@
                 "source": "https://github.com/ray-di/Ray.Di/tree/2.16.1"
             },
             "time": "2023-09-21T08:58:27+00:00"
+        },
+        {
+            "name": "ray/media-query",
+            "version": "0.13.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ray-di/Ray.MediaQuery.git",
+                "reference": "718bcf2ea2427877d991825ef90de182dd35ea46"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ray-di/Ray.MediaQuery/zipball/718bcf2ea2427877d991825ef90de182dd35ea46",
+                "reference": "718bcf2ea2427877d991825ef90de182dd35ea46",
+                "shasum": ""
+            },
+            "require": {
+                "aura/sql": "^4.0 || ^5.0",
+                "doctrine/annotations": "^1.12 || ^2.0",
+                "ext-mbstring": "*",
+                "ext-pdo": "*",
+                "guzzlehttp/guzzle": "^6.3 || ^7.2",
+                "koriym/csv-entities": "^1.0",
+                "koriym/null-object": "^1.0.1",
+                "nikic/php-parser": "^4.15 || ^5.0",
+                "pagerfanta/pagerfanta": "^3.5",
+                "php": "^8.1",
+                "phpdocumentor/reflection-docblock": "^5.3",
+                "phpdocumentor/type-resolver": "^1.6.1",
+                "ray/aop": "^2.10.4",
+                "ray/aura-sql-module": "^1.12.0",
+                "ray/di": "^2.14",
+                "roave/better-reflection": "^4.12 || ^5.6 || ^6.25",
+                "symfony/polyfill-php81": "^1.24"
+            },
+            "require-dev": {
+                "bamarni/composer-bin-plugin": "^1.8",
+                "phpunit/phpunit": "^10.5"
+            },
+            "suggest": {
+                "koriym/csv-entities": "Provides one-to-many entity relation"
+            },
+            "type": "library",
+            "extra": {
+                "bamarni-bin": {
+                    "bin-links": true,
+                    "target-directory": "vendor-bin",
+                    "forward-command": true
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ray\\MediaQuery\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Akihito Koriyama",
+                    "email": "akihito.koriyama@gmail.com"
+                }
+            ],
+            "description": "Media access mapping Framework",
+            "support": {
+                "issues": "https://github.com/ray-di/Ray.MediaQuery/issues",
+                "source": "https://github.com/ray-di/Ray.MediaQuery/tree/0.13.0"
+            },
+            "time": "2024-05-11T12:59:44+00:00"
         },
         {
             "name": "ray/object-visual-grapher",
@@ -3269,6 +3722,120 @@
                 }
             ],
             "time": "2024-03-10T08:07:49+00:00"
+        },
+        {
+            "name": "roave/better-reflection",
+            "version": "6.25.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Roave/BetterReflection.git",
+                "reference": "d5cdeb995a8d755ef5dc49e69e158dd71f81b955"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Roave/BetterReflection/zipball/d5cdeb995a8d755ef5dc49e69e158dd71f81b955",
+                "reference": "d5cdeb995a8d755ef5dc49e69e158dd71f81b955",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "jetbrains/phpstorm-stubs": "2023.3",
+                "nikic/php-parser": "^4.18.0",
+                "php": "~8.1.0 || ~8.2.0 || ~8.3.2",
+                "roave/signature": "^1.8.0"
+            },
+            "conflict": {
+                "thecodingmachine/safe": "<1.1.3"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^12.0.0",
+                "phpstan/phpstan": "^1.10.60",
+                "phpstan/phpstan-phpunit": "^1.3.16",
+                "phpunit/phpunit": "^10.5.12",
+                "roave/infection-static-analysis-plugin": "^1.34.0",
+                "vimeo/psalm": "5.23.0"
+            },
+            "suggest": {
+                "composer/composer": "Required to use the ComposerSourceLocator"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Roave\\BetterReflection\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "James Titcumb",
+                    "email": "james@asgrim.com",
+                    "homepage": "https://github.com/asgrim"
+                },
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com",
+                    "homepage": "https://ocramius.github.io/"
+                },
+                {
+                    "name": "Gary Hockin",
+                    "email": "gary@roave.com",
+                    "homepage": "https://github.com/geeh"
+                },
+                {
+                    "name": "Jaroslav Hanslík",
+                    "email": "kukulich@kukulich.cz",
+                    "homepage": "https://github.com/kukulich"
+                }
+            ],
+            "description": "Better Reflection - an improved code reflection API",
+            "support": {
+                "issues": "https://github.com/Roave/BetterReflection/issues",
+                "source": "https://github.com/Roave/BetterReflection/tree/6.25.0"
+            },
+            "time": "2024-03-10T12:00:48+00:00"
+        },
+        {
+            "name": "roave/signature",
+            "version": "1.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Roave/Signature.git",
+                "reference": "f92ce20f82c9a1df3b50fc56fbdaeb82cf4c9c5b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Roave/Signature/zipball/f92ce20f82c9a1df3b50fc56fbdaeb82cf4c9c5b",
+                "reference": "f92ce20f82c9a1df3b50fc56fbdaeb82cf4c9c5b",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^12.0.0",
+                "infection/infection": "^0.26.19",
+                "phpunit/phpunit": "^9.6.7",
+                "vimeo/psalm": "^5.9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Roave\\Signature\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Sign and verify stuff",
+            "support": {
+                "issues": "https://github.com/Roave/Signature/issues",
+                "source": "https://github.com/Roave/Signature/tree/1.8.0"
+            },
+            "time": "2023-11-25T00:11:29+00:00"
         },
         {
             "name": "symfony/cache",
@@ -4379,64 +4946,6 @@
         }
     ],
     "packages-dev": [
-        {
-            "name": "aura/sql",
-            "version": "5.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/auraphp/Aura.Sql.git",
-                "reference": "0e1fdc674e2a11b4ab83286c4410426714ece1e1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/auraphp/Aura.Sql/zipball/0e1fdc674e2a11b4ab83286c4410426714ece1e1",
-                "reference": "0e1fdc674e2a11b4ab83286c4410426714ece1e1",
-                "shasum": ""
-            },
-            "require": {
-                "ext-pdo": "*",
-                "php": ">=8.1",
-                "psr/log": "^1.0 || ^2.0 || ^3.0"
-            },
-            "require-dev": {
-                "pds/skeleton": "~1.0",
-                "phpunit/phpunit": "^9.5"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Aura\\Sql\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Aura.Sql Contributors",
-                    "homepage": "https://github.com/auraphp/Aura.Sql/contributors"
-                }
-            ],
-            "description": "A PDO extension that provides lazy connections, array quoting, query profiling, value binding, and convenience methods for common fetch styles. Because it extends PDO, existing code that uses PDO can use this without any changes to the existing code.",
-            "homepage": "https://github.com/auraphp/Aura.Sql",
-            "keywords": [
-                "mysql",
-                "pdo",
-                "pgsql",
-                "postgres",
-                "postgresql",
-                "sql server",
-                "sqlite",
-                "sqlserver",
-                "sqlsrv"
-            ],
-            "support": {
-                "issues": "https://github.com/auraphp/Aura.Sql/issues",
-                "source": "https://github.com/auraphp/Aura.Sql/tree/5.0.2"
-            },
-            "time": "2023-06-12T05:16:06+00:00"
-        },
         {
             "name": "bamarni/composer-bin-plugin",
             "version": "1.8.2",
