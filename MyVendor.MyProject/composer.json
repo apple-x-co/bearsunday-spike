@@ -9,6 +9,7 @@
         "bear/package": "^1.14",
         "bear/resource": "^1.17",
         "bear/sunday": "^1.6",
+        "qiq/qiq": "^3.0",
         "ray/aop": "^2.12",
         "ray/di": "^2.14",
         "ray/media-query": "^0.13.0"
