@@ -16,7 +16,6 @@ final class HtmlModule extends AbstractAppModule
     protected function configure(): void
     {
         $appDir = $this->appMeta->appDir;
-        $tmpDir = $this->appMeta->tmpDir;
 
         $this->install(new AuraSessionModule());
 
