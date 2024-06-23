@@ -4,69 +4,39 @@ declare(strict_types=1);
 
 namespace MyVendor\MyProject\TemplateEngine;
 
-use BEAR\Resource\Exception\BadRequestException as BadRequest;
-use BEAR\Resource\Exception\ResourceNotFoundException as NotFound;
+use BEAR\Package\Provide\Error\ErrorLogger;
+use BEAR\Package\Provide\Error\ErrorPageFactoryInterface;
+use BEAR\Package\Provide\Error\NullPage;
 use BEAR\Resource\ResourceObject;
 use BEAR\Sunday\Extension\Error\ErrorInterface;
 use BEAR\Sunday\Extension\Router\RouterMatch as Request;
 use BEAR\Sunday\Extension\Transfer\TransferInterface;
-use Psr\Log\LoggerInterface;
-use Throwable;
+use Exception;
+use Ray\Di\Di\Named;
 
-use function crc32;
-use function sprintf;
-
-class QiqErrorHandler implements ErrorInterface
+final class QiqErrorHandler implements ErrorInterface
 {
-    private ResourceObject $ro;
+    private ResourceObject|null $errorPage = null;
 
     public function __construct(
-        private readonly QiqErrorPage $errorPage,
-        private readonly LoggerInterface $logger,
-        private readonly TransferInterface $transfer,
+        private readonly TransferInterface $responder,
+        private readonly ErrorLogger $logger,
+        #[Named('qiq')]
+        private readonly ErrorPageFactoryInterface $factory,
     ) {
-        $this->ro = $errorPage;
     }
 
-    public function handle(Throwable $e, Request $request): ErrorInterface
+    /** {@inheritDoc}*/
+    public function handle(Exception $e, Request $request) // phpcs:ignore SlevomatCodingStandard.Exceptions.ReferenceThrowableOnly.ReferencedGeneralException
     {
-        $code = $this->getCode($e);
-        $eStr = (string) $e;
-        $logRef = crc32($eStr);
-        if ($code >= 500) {
-            $this->logger->error(sprintf('logref:%s %s', $logRef, $eStr));
-        }
-
-        $this->errorPage->code = $code;
-        $this->errorPage->body = [
-            'e' => [
-                'code' => $e->getCode(),
-                'class' => $e::class,
-                'message' => $e->getMessage(),
-            ],
-            'request' => (string) $request,
-            'stacktrace' => $eStr,
-            'logref' => (string) $logRef,
-        ];
+        ($this->logger)($e, $request);
+        $this->errorPage = $this->factory->newInstance($e, $request);
 
         return $this;
     }
 
     public function transfer(): void
     {
-        ($this->transfer)($this->ro, []);
-    }
-
-    private function getCode(Throwable $e): int
-    {
-        if ($e instanceof NotFound) {
-            return $e->getCode();
-        }
-
-        if ($e instanceof BadRequest) {
-            return $e->getCode();
-        }
-
-        return 503;
+        ($this->responder)($this->errorPage ?? new NullPage(), []);
     }
 }

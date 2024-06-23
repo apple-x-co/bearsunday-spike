@@ -24,6 +24,5 @@ final class HtmlModule extends AbstractAppModule
         $this->bind(Helpers::class)->to(QiqCustomHelpers::class);
 
         $this->install(new QiqModule([$appDir . '/var/qiq']));
-        $this->install(new QiqProdModule($tmpDir . '/qiq'));
     }
 }
