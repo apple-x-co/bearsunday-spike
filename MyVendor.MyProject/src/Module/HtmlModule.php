@@ -7,7 +7,6 @@ namespace MyVendor\MyProject\Module;
 use BEAR\Package\AbstractAppModule;
 use MyVendor\MyProject\TemplateEngine\QiqCustomHelpers;
 use MyVendor\MyProject\TemplateEngine\QiqModule;
-use MyVendor\MyProject\TemplateEngine\QiqProdModule;
 use Qiq\Helpers;
 use Ray\AuraSessionModule\AuraSessionModule;
 
