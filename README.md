@@ -16,6 +16,10 @@
     }
 ```
 
+```bash
+php ./bin/page.php post "/index?name="
+```
+
 * `Ray\Aop\ReflectiveMethodInvocation::proceed()`
   * `Ray\WebFormModule\AuraInputInterceptor`
 
@@ -27,6 +31,10 @@
     public function onPost(string $name): static
     {
     }
+```
+
+```bash
+php ./bin/page.php post "/index2?name="
 ```
 
 * `Ray\Aop\ReflectiveMethodInvocation::proceed()`
@@ -42,6 +50,10 @@
     public function onPost(string $name): static
     {
     }
+```
+
+```bash
+php ./bin/page.php post "/index3?name="
 ```
 
 * `Ray\Aop\ReflectiveMethodInvocation::proceed()`
