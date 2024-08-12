@@ -10,7 +10,7 @@ use Ray\Di\Di\Named;
 use Ray\WebFormModule\Annotation\FormValidation;
 use Ray\WebFormModule\FormInterface;
 
-class Index extends ResourceObject
+class Index3 extends ResourceObject
 {
     /** @var array{greeting: string} */
     public $body;
@@ -22,7 +22,7 @@ class Index extends ResourceObject
          $this->body['form'] = $this->form;
     }
 
-    #[Embed(rel: "hello", src: "app://self/hello")]
+    /** @Embed(rel="hello", src="app://self/hello") */
     public function onGet(string $name = 'BEAR.Sunday'): static
     {
         $this->body['greeting'] = ['Hello ' . $name];
@@ -30,8 +30,10 @@ class Index extends ResourceObject
         return $this;
     }
 
-    /** @FormValidation(onFailure="onPostValidationFailed") */
-    #[Embed(rel: "hello", src: "app://self/hello")]
+    /**
+     * @Embed(rel="hello", src="app://self/hello")
+     * @FormValidation(onFailure="onPostValidationFailed")
+     */
     public function onPost(string $name): static
     {
         $this->body['_method'] = __METHOD__;
@@ -39,7 +41,7 @@ class Index extends ResourceObject
         return $this;
     }
 
-    #[Embed(rel: "hello", src: "app://self/hello")]
+    /** @Embed(rel="hello", src="app://self/hello") */
     public function onPostValidationFailed(): static
     {
         $this->body['_file'] = __FILE__;

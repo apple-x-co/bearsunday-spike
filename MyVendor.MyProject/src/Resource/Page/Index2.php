@@ -10,7 +10,7 @@ use Ray\Di\Di\Named;
 use Ray\WebFormModule\Annotation\FormValidation;
 use Ray\WebFormModule\FormInterface;
 
-class Index extends ResourceObject
+class Index2 extends ResourceObject
 {
     /** @var array{greeting: string} */
     public $body;
@@ -30,8 +30,8 @@ class Index extends ResourceObject
         return $this;
     }
 
-    /** @FormValidation(onFailure="onPostValidationFailed") */
     #[Embed(rel: "hello", src: "app://self/hello")]
+    /** @FormValidation(onFailure="onPostValidationFailed") */
     public function onPost(string $name): static
     {
         $this->body['_method'] = __METHOD__;
