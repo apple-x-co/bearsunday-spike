@@ -6,6 +6,7 @@
 2. コンパイル。`composer run compile` ... OK
 3. InputQuery を使った[リソース](MyVendor.MyProject/src/Resource/Page/Index2.php)作成。
 4. コンパイル。`composer run compile` ... NG
+5. ライブラリアップデート（`bear/resource (1.26.0 => 1.26.1)`） `composer run compile` ... OK
 
 ## Error
 
